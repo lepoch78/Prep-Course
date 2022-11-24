@@ -1,0 +1,18 @@
+npm test JSI.test.js
+
+ESCRIBIR A SLACK X ESTE TEMA
+bien, el test anda, debes instalar git, todo lo que se vio al inicio en las primeras clases, ahi tenes todo explicado
+
+
+IMPORTANTE EL RESIDUO
+5 % 2 arroja el residuo de una division --> 1
+si hago 14 % 6 --> 2  (12 + 2)
+
+cuando se termina la homework se pushea
+
+
+
+Git add / git commit / git push
+o el fork con el tenedor (control de codigo fuente), dice que hay cambios en ese archivos, arriba boton de "Commit", le damos
+Le damos al + (stage al changes) y sale staged change. Luego Commit, aprieto el boton azul de Commit antes escribiendo "tarea terminada"
+Ahora el push --> boton azul de sync changes
