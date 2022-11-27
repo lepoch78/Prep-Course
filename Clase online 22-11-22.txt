@@ -15,3 +15,4 @@ Git add / git commit / git push
 o el fork con el tenedor (control de codigo fuente), dice que hay cambios en ese archivos, arriba boton de "Commit", le damos
 Le damos al + (stage all changes) y sale staged change. Luego Commit, aprieto el boton azul de Commit antes escribiendo "tarea terminada"
 Ahora el push --> boton azul de sync changes
+

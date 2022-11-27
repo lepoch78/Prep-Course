@@ -11,10 +11,14 @@ function crearGato (nombre, edad) {
     nombre: nombre,
     edad: edad,
     meow: function() {console.log("Meow!"); },
+    }
+   return gato;
   }
-  gato.meow();
-  return gato;
-}
+
+  
+
+  
+
 
 function agregarPropiedad (objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
@@ -22,13 +26,9 @@ function agregarPropiedad (objeto, property) {
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
 
-var objeto = {
-  property: [null],
-}
+objeto.property = "null";
 return objeto;
 }
-Prop = agregarPropiedad (casa, reciclada)
-console.log(Prop);
 
 
 function invocarMetodo (objeto, metodo) {
@@ -37,9 +37,10 @@ function invocarMetodo (objeto, metodo) {
   // Nada necesita ser devuelto ("returned")
   // Tu código:
 
-var objeto = {
-  metodo: function(metodo),
+  var objeto = {
+    metodo: [function(){}],
   }
+  objeto.metodo()
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -47,12 +48,10 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
 
-  var objetoMisterioso = {
+  //var objetoMisterioso = {
+  //  numeroMisterioso: numero,
 
-    numeroMisterioso: numero,
 
-
-  }
 
 }
 
@@ -62,9 +61,6 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // Devuelve el objeto
   // Tu código:
 
-  var abc = {
-    
-  }
 
 }
 
@@ -86,8 +82,8 @@ function tieneEmail (usuario) {
   // De lo contratio, devuelve "false"
   // Tu código: 
 
-      if (usuario.email === "") return false;
-      else return true;
+      if (usuario.email !== "") return true;
+      else return false;
 }
 
 function tienePropiedad (objeto, propiedad) {
@@ -161,10 +157,8 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
 
-var producto = {
-  cpd: 
-}
-
+   producto.calcularPrecioDescuento = function () { console.log(producto.precio * (1-producto.porcentajeDeDescuento)) };
+  return producto;
 }
 
 // No modificar nada debajo de esta línea

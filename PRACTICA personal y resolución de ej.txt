@@ -1,0 +1,172 @@
+  
+  var hi = function () { console.log("Hoooola " + this.nombre); };
+  
+  
+  var alumno1 = {
+    nombre: "juan",
+    edad: 44,
+    email: "",
+    constraseña: "elpijo",
+    saludo: hi,
+    amigos: ["jorgito","ceci","Toni"],
+    esPremium: false,
+  }
+var alumno2 = {
+  nombre: "sergio",
+  edad: 29,
+  email: "mecanico@gmail.com",
+  contraseña: "123cho",
+  saludo: hi,
+  amigos: ["Juana","Tere"],
+  esPremium: true,
+ }
+
+
+function crearAlumno(nombre,edad,profesion,email,esPremium) {
+var al = {
+  nombre: nombre,
+  edad: edad,
+  profesion: profesion,
+  email: email,
+  saludo: hi,
+  esPremium: esPremium,
+        }
+  return al;
+  }
+
+var alumno3 = crearAlumno("Jose",23,"pintor","",false);
+var alumno4 = crearAlumno("Sonia",25,"fotografa","sonix@hotmail.com",false);
+
+
+console.log(alumno1);
+alumno1.saludo();
+console.log(alumno2);
+console.log(alumno3);
+console.log(alumno4);
+
+var usuarios = [alumno1, alumno2, alumno3, alumno4]; 
+
+
+function crearGato(nombre, edad) {
+  // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
+  // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
+  // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
+  // Devuelve el objeto
+  // Tu código:
+
+  var gato = {
+    nombre: nombre,
+    edad: edad,
+    meow: function () { console.log("Meow!"); },
+  }
+  gato.meow();
+  return gato;
+}
+console.log(crearGato("Michifuz", 3));
+
+function tieneEmail(usuario) {
+  // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
+  // De lo contratio, devuelve "false"
+  // Tu código:
+  if (usuario.email === "") return false;
+  else return true;
+}
+console.log(tieneEmail(alumno4));
+
+
+function actualizarPassword(usuario, nuevaPassword) {
+  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
+  // Devuelve el objeto
+  // Tu código:
+  usuario.contraseña = nuevaPassword;
+  return usuario;
+} 
+console.log(actualizarPassword(alumno2, "20x20"));
+
+
+function verificarPassword(usuario, password) {
+  // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
+  // Devuelve "true" si coinciden
+  // De lo contrario, devuelve "false"
+  // Tu código:
+    if (password === usuario.contraseña) return true;
+  else return false;
+}
+console.log(verificarPassword(alumno2,"20x20"));
+
+
+function agregarAmigo(usuario, nuevoAmigo) {
+  // "usuario" tiene una propiedad llamada "amigos" que es un array
+  // Agrega "nuevoAmigo" al final de ese array
+  // Devuelve el objeto "usuario"
+  // Tu código:
+  usuario.amigos.push(nuevoAmigo);
+  return usuario;
+}
+console.log(agregarAmigo(alumno1,"Quique"));
+
+
+function pasarUsuarioAPremium(usuarios) {
+  // "usuarios" es un array de objetos "usuario"
+  // Cada objeto "usuario" tiene la propiedad "esPremium"
+  // Define cada propiedad "esPremium" de cada objeto como "true"
+  // Devuelve el array de usuarios
+  // Tu código:
+
+for (i=0; i< usuarios.length; i++) {
+  usuarios[i].esPremium = true;
+}
+return usuarios;
+}
+console.log(pasarUsuarioAPremium(usuarios));
+
+console.log("");
+console.log("-------------------------EJERCICIO a RESOLVER---------------------------");
+console.log("");
+
+let sumapar = 0;
+let sumapar1 = 0;
+let sumapar2 = 0;
+let sumapar3 = 0;
+
+let post1 = {
+  likes: [1,5,10,4],
+  }
+
+let post2 = {
+  likes: [10,20,5],
+}
+
+let post3 = {
+  likes: [10, 10, 50,5,20],
+}
+
+var usuario = {
+  posts: [post1, post2, post3],
+  }
+
+//console.log(usuario.posts.length);
+//console.log(post1.likes);
+
+
+
+
+for (i in post1.likes) {
+  sumapar = sumapar + post1.likes[i];
+  }
+
+
+
+//     for (i = 0; i < post1.likes.length; i++) {
+//        sumapar1 = sumapar1 + post1.likes[i];
+//      }
+//console.log(sumapar1);
+
+
+function sumarLikesDeUsuario(usuario) {
+  // "usuario" tiene una propiedad llamada "posts" que es un array
+  // "posts" es un array de objetos "post"
+  // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
+  // Suma todos los likes de todos los objetos "post"
+  // Devuelve la suma
+  // Tu código:
