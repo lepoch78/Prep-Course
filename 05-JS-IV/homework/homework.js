@@ -7,11 +7,12 @@ function crearGato (nombre, edad) {
   // Devuelve el objeto
   // Tu código:
 
- var gato = {
+  var gato = {
     nombre: nombre,
     edad: edad,
-    meow: function() return "Meow!",
-    }
+    meow: function() {console.log("Meow!"); },
+  }
+  gato.meow();
   return gato;
 }
 
@@ -110,26 +111,32 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
+
   usuario.contraseña = nuevaPassword;
   return usuario;
 } 
 
-function agregarAmigo (usuario, nuevoAmigo) {
+function agregarAmigo(usuario, nuevoAmigo) {
   // "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
 
-  usuario.amigos = push.nuevoAmigo;
+  usuario.amigos.push(nuevoAmigo);
   return usuario;
 }
 
-function pasarUsuarioAPremium (usuarios) {
+function pasarUsuarioAPremium(usuarios) {
   // "usuarios" es un array de objetos "usuario"
   // Cada objeto "usuario" tiene la propiedad "esPremium"
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+
+for (i=0; i< usuarios.length; i++) {
+  usuarios[i].esPremium = true;
+}
+return usuarios;
 }
 
 function sumarLikesDeUsuario (usuario) {
@@ -140,9 +147,7 @@ function sumarLikesDeUsuario (usuario) {
   // Devuelve la suma
   // Tu código:
 
-  var usuario = {
-      posts: []
-  }
+ 
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -155,6 +160,10 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+
+var producto = {
+  cpd: 
+}
 
 }
 
