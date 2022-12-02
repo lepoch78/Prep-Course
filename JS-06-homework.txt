@@ -1,0 +1,50 @@
+
+
+  function Usuario(usuario, nombre, email, password) {
+      this.usuario = usuario;
+      this.nombre = nombre;
+      this.email = email;
+      this.password = password;
+      this.datos = function() {
+        return {
+        Nombre_y_usuario: this.nombre + " / " + this.usuario,
+        Email: this.email,
+        Contraseña: this.password,
+                }
+      }
+      this.saludar = function() {console.log("Hola, mi nobre es " + this.nombre);}
+  }
+
+    
+//Usuario.prototype.saludar = function() {console.log("Hola, mi nombre es " + this.nombre);}
+  
+  
+var madmax = new Usuario("MadMax","Juan","juan@gmail.com","abc123");
+var fifi = new Usuario("Five","sergio","sergio@gmail.com","123abc");
+
+//console.log(madmax);
+console.log(madmax.datos());
+//madmax.saludar();
+
+----------------------------------------------
+
+// constructor Usuario donde persona es un objeto
+
+ var juan = {
+  usuario: "madmax",
+  nombre: "Juan",
+  email: "juan@gmail.com",
+  password: "abc123",
+  }
+
+function Usuario(persona) {
+      this.usuario = persona.usuario;
+      this.nombre = persona.nombre;
+      this.email = persona.email;
+      this.password = persona.password;
+      this.saludo = function() {return "Hola " + persona.nombre;}
+       }
+
+var pocho = new Usuario(juan);
+console.log(pocho);
+pocho.saludo()

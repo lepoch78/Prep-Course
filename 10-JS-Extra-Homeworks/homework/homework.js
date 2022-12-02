@@ -10,6 +10,9 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+
+  let matriz = Object.entries(objeto);
+  return matriz;
 }
 
 
@@ -18,7 +21,24 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-}
+  
+  const alfabeto = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"];
+  var alfabetocant = [];
+  var output = [];
+      
+    for (i=0; i < alfabeto.length; i++) {
+      var cont = 0;
+      for (j=0; j < string.length; j++) {
+        if (alfabeto[i] === string[j]) cont = cont + 1;
+        }
+      alfabetocant.push(cont);
+      }
+    for (x=0; x < alfabeto.length; x++) {
+      if (alfabetocant[x] !== 0) {
+      output.push(alfabeto[x] + ": " + alfabetocant[x]);
+      }}
+      return output;
+  }
 
 
 function capToFront(s) {
@@ -26,15 +46,27 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  
+  var may = "";
+  var min = "";
+  var nvas = ""; 
+  
+  for (i=0; i < s.length; i++) {
+    if (s[i].charCodeAt() < 91) var may = may + s[i];
+    else var min = min + s[i];
+      }
+  return nvas = may + min;
 }
-
-
+  
 function asAmirror(str) {
   //La función recibe una frase. 
   //Escribe una función que tome la frase recibida y la devuelva de modo tal que se pueda leer de izquierda a derecha 
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+
+
+  
 } 
 
 

@@ -7,7 +7,7 @@ const nuevaString = "Hola";
 const nuevoNum = 5;
 
 // Crea un variable booleana:
-const nuevoBool = truel;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 4.2;
+const nuevoModulo = 21 % 5 === 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -103,14 +103,14 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  return x/y - Math.trunc(x/y);
+  return x % y;
 }
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num/2 - Math.trunc(num/2) == 0) {
+  if (num % 2 == 0) {
     return true;
   } else {
     return false
@@ -156,7 +156,7 @@ function redondearNumero(num) {
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  Math.ceil(num)
+  return Math.ceil(num);
 }
 
 function numeroRandom() {
@@ -171,9 +171,9 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   if (numero > 0) {
-    return "es positivo";
+    return "Es positivo";
   } else if (numero < 0) {
-    return "es negativo";
+    return "Es negativo";
   } else {
     return false;
   }
@@ -225,7 +225,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  return euro*1,2;
+  return euro*1.2;
 }
 
 
